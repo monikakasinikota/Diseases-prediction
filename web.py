@@ -9,9 +9,13 @@ st.set_page_config(
     page_icon="👨‍⚕️"
 )
 
-diabetes_model=pickle.load(open(r"C:\Users\karthik\Diseases predictions\training_models\diabetes_model.sav",'rb'))
-heart_disease_model=pickle.load(open(r"C:\Users\karthik\Diseases predictions\training_models\heart_model.sav",'rb'))
-parkinsons_model=pickle.load(open(r"C:\Users\karthik\Diseases predictions\training_models\parkinsons_model.sav",'rb'))
+#diabetes_model=pickle.load(open(r"C:\Users\karthik\Diseases predictions\training_models\diabetes_model.sav",'rb'))
+#heart_disease_model=pickle.load(open(r"C:\Users\karthik\Diseases predictions\training_models\heart_model.sav",'rb'))
+#parkinsons_model=pickle.load(open(r"C:\Users\karthik\Diseases predictions\training_models\parkinsons_model.sav",'rb'))
+diabetes_model = pickle.load(open("training_models/diabetes_model.sav", 'rb'))
+heart_disease_model = pickle.load(open("training_models/heart_model.sav", 'rb'))
+parkinsons_model = pickle.load(open("training_models/parkinsons_model.sav", 'rb'))
+
 
 with st.sidebar:
     selected=option_menu('prediction of disease outbreak system',['Diabetes Prediction','Heart Disease Prediction','Parkinsons Prediction'],
